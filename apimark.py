@@ -33,7 +33,7 @@ class User(Resource):
             abort(409, message="User ID is taken.")
         user_args = user_post_args.parse_args()
         user = {"_id": user_id, "firstname": user_args["firstname"],
-                "lastname": ["lastname"], "age": user_args["age"],
+                "lastname": user_args["lastname"], "age": user_args["age"],
                 "city": user_args["city"], "keywords": " "}
         users.insert_one(user)
         return user, 201
