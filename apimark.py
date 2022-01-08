@@ -171,4 +171,4 @@ api.add_resource(Listing, "/listing/<int:listing_id>", "/listing/<int:listing_id
 api.add_resource(Suggestions, "/suggestions/<int:user_id>")
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
