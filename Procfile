@@ -1,1 +1,1 @@
-web: gunicorn app:apimark.py
+web: gunicorn apimark:app
