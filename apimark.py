@@ -165,6 +165,10 @@ class Suggestions(Resource):
             r.append(result)
         return r, 200
 
+@app.route("/")
+def index():
+    return "<p>Welcome to Apimark - Try Our Resources: </br></br> /user/[user_id] </br> /listing/[listing_id]/[" \
+           "user_id] </br> /suggestions/[user_id]</p> "
 
 api.add_resource(User, "/user/<int:user_id>")
 api.add_resource(Listing, "/listing/<int:listing_id>", "/listing/<int:listing_id>/<int:user_id>")
